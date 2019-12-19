@@ -1,1 +1,0 @@
-https://github.com/danielmalone/Android-RecyclerView-ArrayList/blob/master/app/src/main/java/com/finepointmobile/viewmodel2/MainActivity.java

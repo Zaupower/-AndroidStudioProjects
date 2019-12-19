@@ -1,6 +1,9 @@
 package com.example.fragmentex1f5;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -9,5 +12,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment, new fragmentA());
+        fragmentTransaction.commit();
     }
 }

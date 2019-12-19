@@ -3,12 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="3"
     tools:context=".FragmentAA">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Escreva aqui um texto"/>
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:layout_marginTop="29dp"
+        android:text="Name" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:text="Abrir" />
 </FrameLayout>

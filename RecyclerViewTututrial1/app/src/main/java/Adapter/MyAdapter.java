@@ -46,15 +46,23 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder >{
         return listItems.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public TextView name;
         public TextView description;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView){
             super(itemView);
 
             name = (TextView) itemView.findViewById(R.id.tittle);
             description = (TextView) itemView.findViewById(R.id.description);
+            //
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+
+            listItems.size();
         }
     }
 }

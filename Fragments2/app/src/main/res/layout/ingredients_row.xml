@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/im_ingredit"
+            android:layout_width="62dp"
+            android:layout_height="38dp"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+        <TextView
+            android:id="@+id/tv_ingredient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="ingrediente"
+            android:layout_toRightOf="@+id/im_ingredit"
+            android:paddingLeft="5dp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

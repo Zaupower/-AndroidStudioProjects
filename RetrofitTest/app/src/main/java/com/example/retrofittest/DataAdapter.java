@@ -1,6 +1,8 @@
 package com.example.retrofittest;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +14,6 @@ import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataViewHolder> {
 
-
     private List<OurDataSet> list;
     private Context context;
 
@@ -20,8 +21,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataViewHolder> {
             this.list = list;
             this.context = context;
         }
-
-
 
     @NonNull
     @Override
@@ -37,11 +36,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataViewHolder> {
             OurDataSet currentData= list.get(position);
 
             holder.hobby.setText(currentData.getHobby());
-            holder.name.setText(currentData.name);
+            holder.name.setText(currentData.getName());
+            holder.age.setText(currentData.getAge());
     }
 
     @Override
     public int getItemCount() {
         return list.size();
     }
+
 }

@@ -19,10 +19,13 @@ import Model.ListItem;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder >{
     private Context context;
     private List<ListItem> listItems;
+    private OnNoteListener onNoteListener;
 
-    public MyAdapter(Context context, List<ListItem> listItems) {
+
+    public MyAdapter(Context context, List<ListItem> listItems, OnNoteListener onNoteListener) {
         this.context = context;
         this.listItems = listItems;
+        this.onNoteListener= onNoteListener;
     }
 
     @NonNull
@@ -30,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder >{
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_row, parent,false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, onNoteListener);
     }
 
     @Override
@@ -46,23 +49,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder >{
         return listItems.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView name;
         public TextView description;
+        OnNoteListener onNoteListener;
 
-        public ViewHolder(@NonNull View itemView){
+        public ViewHolder(@NonNull View itemView, OnNoteListener onNoteListener){
             super(itemView);
 
             name = (TextView) itemView.findViewById(R.id.tittle);
             description = (TextView) itemView.findViewById(R.id.description);
             //
+            this.onNoteListener = onNoteListener;
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
 
-            listItems.size();
+            onNoteListener.onNoteClick(getAdapterPosition());
         }
+    }
+    public interface OnNoteListener{
+        void onNoteClick(int position);
     }
 }

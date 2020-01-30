@@ -1,10 +1,10 @@
-package com.example.jogodaspalavras;
+package com.example.fragments2.JogoDasPalavras;
 
 import java.util.Random;
 
 public class Anagram {
     public static Random random = new Random();
-    public static final  String [] words = {"comida", "bola", "anananas"," cadeira",
+    public static final  String [] words = {"comida", "bola", "ananas"," cadeira",
                                             "computador", "carro", "rato"};
     public static String randomWord(){
         return words[random.nextInt(words.length)];

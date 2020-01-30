@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fragments2</string>
+
+    <string name="search_text">New Search Term</string>
+    <string name="search_hint">E.g: Batman</string>
+    <string name="submit_text">Submit Text</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

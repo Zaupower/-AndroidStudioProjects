@@ -28,7 +28,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StratRecipeSearch extends AppCompatActivity {
+public class StartRecipeSearch extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecipeRecyclerViewAdapter movieRecyclerViewAdapter;
@@ -59,7 +59,7 @@ public class StratRecipeSearch extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        Prefs prefs = new Prefs(StratRecipeSearch.this);
+        Prefs prefs = new Prefs(StartRecipeSearch.this);
         String search = prefs.getSearch();
 
         recipeDetailsList = new ArrayList<>();
@@ -144,7 +144,7 @@ public class StratRecipeSearch extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Prefs prefs = new Prefs(StratRecipeSearch.this);
+                Prefs prefs = new Prefs(StartRecipeSearch.this);
 
                 if (!newSearchEdt.getText().toString().isEmpty()){
                     String search = newSearchEdt.getText().toString();

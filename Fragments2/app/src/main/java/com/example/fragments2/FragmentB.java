@@ -13,12 +13,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 
-import com.example.fragments2.Receitas.Receitas.Activitys.StratRecipeSearch;
+import com.example.fragments2.Receitas.Receitas.Activitys.StartRecipeSearch;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class fragment_b extends Fragment {
+public class FragmentB extends Fragment {
 
 
     private Button pesquisa_btn, analisa_btn ;
@@ -33,23 +33,12 @@ public class fragment_b extends Fragment {
         pesquisa_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent;
-                intent = new Intent(getActivity(), StratRecipeSearch.class);
+                intent = new Intent(getActivity(), StartRecipeSearch.class);
                 startActivity(intent);
             }
         });
 
-        /*
-        btn5 = v.findViewById(R.id.button5);
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent;
-                intent = new Intent(getActivity(), StartNewGamePalavras.class);
-                startActivity(intent);
-            }
-        });*/
         return v;
     }
 

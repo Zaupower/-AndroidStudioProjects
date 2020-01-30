@@ -55,7 +55,7 @@ public class Start extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_test2);
+        setContentView(R.layout.activity_game_math_quiz);
 
         btn_start = findViewById(R.id.btn_start);
         btn_answer0 = findViewById(R.id.btn_answer0);

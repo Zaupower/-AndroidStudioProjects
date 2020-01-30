@@ -10,8 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.moviedirectory.Model.RecipeDetails;
-import com.example.moviedirectory.R;
+import com.example.fragments2.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -19,9 +18,9 @@ import java.util.List;
 public class RecipeDetailsRecyclerViewAdapter extends RecyclerView.Adapter<RecipeDetailsRecyclerViewAdapter.ViewHolder> {
 
     private Context context;
-    private List<RecipeDetails> recipeDetailsList;
+    private List<com.example.fragments2.Receitas.Model.RecipeDetails> recipeDetailsList;
 
-    public RecipeDetailsRecyclerViewAdapter(Context context, List<RecipeDetails> movies) {
+    public RecipeDetailsRecyclerViewAdapter(Context context, List<com.example.fragments2.Receitas.Model.RecipeDetails> movies) {
         this.context = context;
         this.recipeDetailsList = movies;
     }
@@ -36,7 +35,7 @@ public class RecipeDetailsRecyclerViewAdapter extends RecyclerView.Adapter<Recip
 
     @Override
     public void onBindViewHolder(@NonNull RecipeDetailsRecyclerViewAdapter.ViewHolder holder, int position) {
-        RecipeDetails recipeDetails = recipeDetailsList.get(position);
+        com.example.fragments2.Receitas.Model.RecipeDetails recipeDetails = recipeDetailsList.get(position);
         String posterLink = recipeDetails.getImage();
         holder.tittle.setText(recipeDetails.getTitle());
 

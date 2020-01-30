@@ -1,4 +1,4 @@
-package com.example.fragments2.Receitas.Activitys.Util;
+package com.example.fragments2.Receitas.Receitas.Util;
 
 import android.app.Activity;
 import android.content.SharedPreferences;

@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_pesquisa_receitas"
         android:layout_width="117dp"
         android:layout_height="110dp"
         android:layout_marginBottom="32dp"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_analisa_alimento"
         android:layout_width="117dp"
         android:layout_height="110dp"
         android:layout_marginTop="32dp"

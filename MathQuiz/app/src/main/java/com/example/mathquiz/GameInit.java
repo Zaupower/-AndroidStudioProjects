@@ -1,4 +1,9 @@
 package com.example.mathquiz;
 
-public class GameInit {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class GameInit extends AppCompatActivity {
+
+
+
 }

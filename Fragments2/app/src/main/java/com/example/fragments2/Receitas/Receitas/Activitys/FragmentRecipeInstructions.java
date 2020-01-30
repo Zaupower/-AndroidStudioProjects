@@ -9,7 +9,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.fragments2.R;
+import com.example.fragments2.Receitas.Receitas.Util.Constantes;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +29,7 @@ import com.example.fragments2.R;
 public class FragmentRecipeInstructions extends Fragment {
 
 
+    String instrucoes;
     public FragmentRecipeInstructions() {
         // Required empty public constructor
     }

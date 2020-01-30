@@ -1,4 +1,4 @@
-package com.example.fragments2.Receitas.Receitas.Model;
+package com.example.fragments2.Receitas.Model;
 
 import java.io.Serializable;
 
@@ -9,6 +9,15 @@ public class RecipeDetails implements Serializable {
     private String id;
     private String servings;
     private String image;
+    private String Steps;
+
+    public String getSteps() {
+        return Steps;
+    }
+
+    public void setSteps(String steps) {
+        Steps = steps;
+    }
 
     public String getId() {
         return id;

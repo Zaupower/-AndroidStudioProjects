@@ -9,13 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fragments2.R;
-import com.example.fragments2.Receitas.Receitas.Model.RecipeDetails;
-import com.example.moviedirectory.Activitys.RecipeDetailsDetailActivity;
-import com.example.moviedirectory.Model.RecipeDetails;
-import com.example.moviedirectory.R;
+import com.example.fragments2.Receitas.Receitas.Activitys.FragmentRecipeInstructions;
+import com.example.fragments2.Receitas.Receitas.Activitys.RecipeDetailsDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -24,9 +24,9 @@ import java.util.List;
 public class RecipeRecyclerViewAdapter extends RecyclerView.Adapter<RecipeRecyclerViewAdapter.ViewHolder> {
 
     private Context context;
-    private List<RecipeDetails> recipeDetailsList;
+    private List<com.example.fragments2.Receitas.Model.RecipeDetails> recipeDetailsList;
 
-    public RecipeRecyclerViewAdapter(Context context, List<RecipeDetails> recipeDetails) {
+    public RecipeRecyclerViewAdapter(Context context, List<com.example.fragments2.Receitas.Model.RecipeDetails> recipeDetails) {
         this.context = context;
         this.recipeDetailsList = recipeDetails;
     }
@@ -42,7 +42,7 @@ public class RecipeRecyclerViewAdapter extends RecyclerView.Adapter<RecipeRecycl
     @Override
     public void onBindViewHolder(@NonNull RecipeRecyclerViewAdapter.ViewHolder holder, int position) {
 
-        RecipeDetails recipeDetails = recipeDetailsList.get(position);
+        com.example.fragments2.Receitas.Model.RecipeDetails recipeDetails = recipeDetailsList.get(position);
         String posterLink = recipeDetails.getImage();
         holder.tittle.setText(recipeDetails.getTitle());
         holder.servings.setText(recipeDetails.getReadyInMinutes());
@@ -78,7 +78,8 @@ public class RecipeRecyclerViewAdapter extends RecyclerView.Adapter<RecipeRecycl
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    RecipeDetails recipeDetails = recipeDetailsList.get(getAdapterPosition());
+
+                    com.example.fragments2.Receitas.Model.RecipeDetails recipeDetails = recipeDetailsList.get(getAdapterPosition());
                     Intent intent = new Intent(context, RecipeDetailsDetailActivity.class);
 
                     intent.putExtra("recipeDetails",  recipeDetails);
@@ -93,4 +94,5 @@ public class RecipeRecyclerViewAdapter extends RecyclerView.Adapter<RecipeRecycl
 
         }
     }
+
 }
